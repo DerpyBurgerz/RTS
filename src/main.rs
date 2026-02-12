@@ -1,3 +1,11 @@
+use bevy::app::*;
+
+mod components;
+mod systems;
+
 fn main() {
-    println!("Hello, world!");
+    App::new().add_systems(Update, hello_world).run();
+}
+fn hello_world() {
+    println!("hello world!");
 }
