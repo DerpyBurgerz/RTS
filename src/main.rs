@@ -1,7 +1,6 @@
 use bevy::app::*;
 
-mod components;
-mod systems;
+mod rts_plugin;
 
 fn main() {
     App::new().add_systems(Update, hello_world).run();
