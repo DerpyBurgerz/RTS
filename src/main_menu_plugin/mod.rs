@@ -1,3 +1,3 @@
 mod components;
 mod systems;
-mod sub_states;
+pub mod main_menu_plugin;
