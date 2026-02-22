@@ -15,7 +15,7 @@ fn main() {
             spawn_unit,
             ))
 
-        .add_systems(PostUpdate, project_positions)
+        .add_systems(Update, project_positions)
         .run();
 }
 fn spawn_camera(mut commands: Commands) {commands.spawn(Camera2d);}

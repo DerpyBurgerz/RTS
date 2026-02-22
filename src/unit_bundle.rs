@@ -1,9 +1,10 @@
 use bevy::prelude::*;
-use crate::components::{Position};
+use crate::components::{Movable, Position};
 
 #[derive(Bundle)]
 struct UnitBundle {
     pub position: Position,
+    pub movable: Movable,
 }
 
 pub fn spawn_unit(
@@ -15,7 +16,8 @@ pub fn spawn_unit(
     let material = materials.add(Color::BLACK);
     commands.spawn((
         UnitBundle {
-            position: Position(Vec2::new(0., 0.))
+            position: Position(Vec2::new(0., 0.)),
+            movable: Movable,
         },
         Mesh2d(mesh),
         MeshMaterial2d(material),
